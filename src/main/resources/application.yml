@@ -1,0 +1,25 @@
+graphql:
+  packages:
+    - "com.springkotlingql.schema"
+---
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  r2dbc:
+    initialization-mode: always
+    url: r2dbc:gcp:mysql://<USER>:<PASSWORD>!@<CONNECTION_INSTANCE_NAME>/<DATABASE_NAME>
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  r2dbc:
+    initialization-mode: always
+    url: r2dbc:mysql://localhost:3306/<DATABASE_NAME>
+    username: <USER>
+    password: <PASSWORD>

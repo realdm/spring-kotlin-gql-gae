@@ -1,0 +1,5 @@
+runtime: java11
+instance_class: F2
+env_variables:
+  SPRING_PROFILES_ACTIVE: "prod"
+entrypoint: java -noverify -jar <NAME_OF_THE_JAR>.jar

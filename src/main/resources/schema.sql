@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS accounts(
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    last_name VARCHAR(50),
+    first_name VARCHAR(50),
+    email VARCHAR(100) NOT NULL UNIQUE,
+    created_at VARCHAR(50)
+);
