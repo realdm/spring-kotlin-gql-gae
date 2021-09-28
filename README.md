@@ -20,6 +20,11 @@ After cloning the project open it using your favourite IDE. I recommend you [Int
 Install mysql on your machine using homebrew and create a database. I found this [post](https://flaviocopes.com/mysql-how-to-install/) very useful and with all of the information you will need to do that.
 **Note**: Remember to record the USER_NAME, PASSWORD and DATABASE_NAME you will create. You will need it later.
 
+**Installation TLDR; ( Do the following on your terminal)**
+1. `brew services start mysql`
+2. `mysql_secure_installation`
+3. `mysql.server start`
+
 ### Configure the Database Connection on the project
 1. Open the project then the file **application.yml). The file is located at **src/main/resources/application.yml**
 2. Edit the spring configuration for the **dev** profile by adding the information about how to connect to your database
