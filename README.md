@@ -21,9 +21,15 @@ Install mysql on your machine using homebrew and create a database. I found this
 **Note**: Remember to record the USER_NAME, PASSWORD and DATABASE_NAME you will create. You will need it later.
 
 **Installation TLDR; ( Do the following on your terminal)**
-1. `brew services start mysql`
-2. `mysql_secure_installation`
-3. `mysql.server start`
+1. `brew install mysql`
+2. `brew services start mysql`
+3. `mysql_secure_installation`
+4. `mysql.server start`
+5. `mysql -u root -p`
+6. `mysql> CREATE DATABASE <DATABASE_NAME>;`
+7. `mysql> CREATE USER '<USER>'@'localhost' IDENTIFIED BY '<PASSWORD>';`
+8. `mysql> GRANT ALL PRIVILEGES ON <DATABASE_NAME>.* TO '<USER>'@'localhost';`
+9. `mysql> exit`
 
 ### Configure the Database Connection on the project
 1. Open the project then the file **application.yml). The file is located at **src/main/resources/application.yml**
